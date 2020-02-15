@@ -1,0 +1,275 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="index.js"></script>
+<!--  <script src="addDisaster.js"></script>  -->
+  <title>
+    Aid Bee
+  </title>
+  <style>
+    .mainbg {
+      margin:10%;
+      padding:10%;
+      background-color: #d0d3f5;
+    }
+
+
+    .boxbg {
+      background-color: #87f9b9;
+
+      color: white;
+      position: relative;
+      width: 100%;
+
+
+    }
+    .mainview{
+      padding-top:10%;
+      padding-left: 10%;
+      float: left;
+
+    }
+
+    .column {
+      width: auto;
+      text-align: justify;
+      background-color: #e2e3ef;
+      margin-left:10%;
+      margin-bottom: 10%;
+      white-space: pre-line;
+      position: relative;
+      word-wrap: break-word;
+
+    }
+
+
+    /* Clear floats after image containers */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+
+
+    }
+
+
+  .sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #b8edcf; /* Black*/
+
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.openbtn {
+  font-size: 14px;
+  position: relative;
+  margin:1%;
+
+
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .1s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.custom_div {
+overflow:hidden;
+}
+.custom_div div {
+min-height: 100%;
+padding: 10px;
+text-align: center;
+}
+
+.boxcontainer {
+  background-color:#3f48cc;
+  margin-top:10%;
+  overflow: auto;
+   padding: 0 60px 0 60px;
+}
+.box{
+  background-color:red;
+  width:50px;
+   float:left;
+   border:dotted;
+   position: relative;
+   margin-left: -100%;
+   right: 60px;
+   overflow: auto;
+}
+.output{
+  white-space: pre-line;
+}
+.navicon{
+  color: white;
+
+  position: relative;
+}
+
+.btn_nav {
+  background-color: transparent; /* Blue background */
+  border: none; /* Remove borders */
+  color: white;
+  /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 20px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+.bg{
+    background-color:#87f9b9;
+    background-size:cover;
+    height:100px;
+    width:"100%";
+    border-radius: 2em;
+    padding-left: 2.2em;
+    padding-top:2.5em;
+  }
+.main{
+  background-color: #d0d3f5;
+  height:auto;
+  width:auto;
+}
+
+
+  </style>
+</head>
+
+<body>
+<div class="container-fluid boxbg">
+<button type="button" class="btn_nav" onclick="openNav()"><i class="fa fa-bars navicon"></i></button>
+<center><font size="5em">Agro</font></center>
+</div>
+
+    <div id="mySidenav" class="sidenav">
+     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+     <a href="#">My Orders</a>
+     <a href="afftectedAreas.html">Track My Orders</a>
+     <a href="#">Log-Out</a>
+     <a href="voice.html">Contact Us</a>
+   </div>
+
+   <!-- Use any element to open the sidenav -->
+
+
+   <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+
+
+
+<div class="container" id="contain_out">
+
+
+
+<script>
+function price_load() {
+  var ele = document.getElementsByName('Price_Radio');
+
+              for(i = 0; i < ele.length; i++) {
+                  if(ele[i].checked)
+                  {
+                    var price=parseInt(ele[i].value)+100;
+                  document.getElementById("price_print").innerHTML
+                          = "Your Total Price: "+price+" Rs";
+              }
+            }
+}
+</script>
+  <br>
+<div class="container">
+<div class="bg">
+Welcome to payment Gateway
+</div>
+</div>
+
+<br><br>
+
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Delivery Location</label>
+      <br>
+      <input type="textarea" class="form-control" id="exampleFormControlInput1" placeholder="House Name/No." rows="1">
+      <br>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Town" rows="1">
+      <br>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="State" rows="1">
+      <br>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="PinCode" rows="1">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Mode of Payment</label>
+      <select class="form-control" id="exampleFormControlSelect1">
+        <option>Debit Card</option>
+        <option>Credit Card</option>
+        <option>Net Banking</option>
+
+      </select>
+    </div>
+    <div class="form-check">
+  <input class="form-check-input" type="radio" name="Price_Radio" id="Radios1" value="100" onclick="price_load()">
+  <label class="form-check-label" for="Radios1">
+    Fast Delivery
+  </label>
+</div> <br>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="Price_Radio" id="Radios2" value="50" onclick="price_load()" >
+  <label class="form-check-label" for="Radios2">
+    Pool Delivery
+  </label>
+</div>
+<br><br><br>
+
+<p id="price_print" class="font-weight-bold"></p>
+    <br>
+     <button type="submit" class="btn btn-success" onclick="">Make Payment</button>
+  </form>
+</div>
+
+
+
+</body>
+</html>
